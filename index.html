@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			@keyframes move{
+				0%{
+					transform: rotate(0deg);
+				}
+				25%{
+					transform: rotate(30deg);
+				}
+				70%{
+					transform: rotate(-30deg);
+				}
+				100%{
+					transform: rotate(0deg);
+				}
+			}
+			@keyframes domove{
+				0%{
+					left: 24px;
+				    top: 12px;
+				}
+				100%{
+					left: 24px;
+				    top: 8px;
+			    }		
+			}
+			@keyframes xmove{
+				0%{
+					height: 50px;
+				}
+				25%{
+					height: 30px;
+				}
+				70%{
+					height: 40px;
+				}
+				100%{
+					height: 50px;
+				}
+			}
+			#box{
+				width: 120px;
+				height: 120px;
+				background: #ffda6a;
+				border-radius: 50%;
+				margin: 50px auto;
+			}
+			.a{
+				width: 73px;
+				height: 98px;
+				padding: 12px 23px 10px 24px;
+				position: relative;
+				animation: move 3s forwards infinite;
+				transform-origin: 60px 0;
+			}
+			.m{
+				position: absolute;
+				left: 24px;
+				top: 12px;
+				animation: domove 3s forwards infinite;
+			}
+			.y{
+				position: absolute;
+				left: 24px;
+				top: 22px;
+			}
+			.b{
+				width: 30px;
+				height: 50px;
+				margin: 0 20px 0 21px;
+				background: black;
+				border-radius: 50%;
+				position: absolute;
+				left: 24px;
+				top: 60px;
+				animation: xmove 3s forwards infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="a">
+				<img class="m" src="mao.png"/>
+				<img class="y" src="yan.png"/>
+				<div class="b"></div>
+			</div>
+		</div>
+	</body>
+</html>
